@@ -1,0 +1,17 @@
+﻿@model CrudRavenDB.Models.Cliente
+
+<h2>Deletar Cliente</h2>
+<hr>
+
+<form asp-action="delete" asp-controller="home" method="POST" class="form">
+    <input asp-for="Id" hidden />
+
+    <div class="panel panel-default">
+        <div class="panel-heading">@Model.Nome</div>
+        <div class="panel-body">
+            @Model.Descricao
+        </div>
+    </div>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="index" asp-controller="home" class="btn btn-link">Back to list</a>
+</form>

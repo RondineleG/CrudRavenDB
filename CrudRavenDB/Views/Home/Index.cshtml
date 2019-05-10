@@ -1,0 +1,38 @@
+﻿@model IList<CrudRavenDB.Models.Cliente>
+@{
+    var i = 1;
+}
+
+<h2>Cadastro de Clientes Usando RavenDB</h2>
+<hr>
+
+<a asp-action="create" asp-controller="home" class="btn btn-success">Create new</a>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <td>Id</td>
+            <th>Name</th>
+            <th>Desc</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bug in Model)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@bug.Id</td>
+                <td>@bug.Nome</td>
+                <td>@bug.Descricao</td>
+                <td>
+                    <a asp-action="details" asp-route-id="@bug.Id" class="btn btn-default">Details</a>
+                    <a asp-action="delete" asp-route-id="@bug.Id" class="btn btn-danger">Delete</a>
+                    <a asp-action="edit" asp-route-id="@bug.Id" class="btn btn-primary">Edit</a>
+                </td>
+            </tr>
+            i++;
+        }
+    </tbody>
+</table>

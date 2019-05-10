@@ -1,0 +1,12 @@
+﻿@model CrudRavenDB.Models.Cliente
+
+<h2>Detales Do Cliente</h2>
+<hr>
+
+<div class="panel panel-default">
+    <div class="panel-heading">@Model.Nome</div>
+    <div class="panel-body">
+        @Model.Descricao
+    </div>
+</div>
+<a asp-action="index" asp-controller="home" class="btn btn-link">Back to list</a>

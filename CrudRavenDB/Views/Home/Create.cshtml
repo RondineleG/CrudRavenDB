@@ -1,0 +1,14 @@
+﻿@model CrudRavenDB.Models.Cliente
+
+<h2>Criar Novo Cliente</h2>
+<hr>
+
+<form asp-action="create" asp-controller="home" method="POST" class="form">
+
+    <input asp-for="Nome" placeholder="Name" class="form-control" />
+    <br>
+    <input asp-for="Descricao" placeholder="Description" class="form-control" />
+    <br>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="index" asp-controller="home" class="btn btn-link">Back to list</a>
+</form>
